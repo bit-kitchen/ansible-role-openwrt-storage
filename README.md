@@ -1,6 +1,13 @@
 ansible-role-openwrt-storage
 ============================
 
+[![Ansible Role: bit_kitchen.openwrt_storage](https://img.shields.io/ansible/role/47608.svg)](https://galaxy.ansible.com/bit_kitchen/openwrt_storage)
+[![Build Status: bit-kitchen/ansible-role-openwrt-storage](https://travis-ci.org/bit-kitchen/ansible-role-openwrt-storage.svg?branch=master)](https://travis-ci.org/bit-kitchen/ansible-role-openwrt-storage)
+
+```sh
+ansible-galaxy install bit_kitchen.openwrt_storage
+```
+
 Configure OpenWrt for USB drive support and auto mount.
 
 Requirements
