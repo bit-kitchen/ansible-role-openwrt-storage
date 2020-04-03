@@ -1,0 +1,7 @@
+---
+- name: uci commit
+  uci:
+    command: commit
+
+- name: block mount
+  command: block mount

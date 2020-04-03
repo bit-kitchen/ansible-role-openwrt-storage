@@ -1,0 +1,9 @@
+---
+# Anonymous Swap: Mount swap not specifically configured
+anon_swap: yes
+# Anonymous Mount: Mount filesystems not specifically configured
+anon_mount: yes
+# Automount Swap: Automatically mount swap on hotplug
+auto_swap: yes
+# Automount Filesystem: Automatically mount filesystems on hotplug
+auto_mount: yes

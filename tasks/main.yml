@@ -1,0 +1,30 @@
+---
+# https://openwrt.org/docs/guide-user/storage/usb-drives-quickstart
+- name: Install required packages
+  opkg:
+    name: "{{ item }}"
+  with_items:
+  - block-mount
+  - e2fsprogs
+  - kmod-fs-ext4
+  - kmod-usb-storage
+  - kmod-usb2
+  - kmod-usb3
+
+- name: Config auto mount
+  uci:
+    command: set
+    key: fstab.@global[0]
+    value:
+      anon_swap: "{{ '1' if anon_swap else '0' }}"
+      anon_mount: "{{ '1' if anon_mount else '0' }}"
+      auto_swap: "{{ '1' if auto_swap else '0' }}"
+      auto_mount: "{{  '1' if auto_mount else '0' }}"
+  notify:
+  - uci commit
+  - block mount
+
+- name: Enable service fstab
+  service:
+    name: fstab
+    enabled: yes

@@ -1,0 +1,7 @@
+#!/usr/bin/env ansible-playbook
+---
+- hosts: openwrt
+  remote_user: root
+  gather_facts: no
+  roles:
+    - ../..

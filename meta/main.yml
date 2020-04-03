@@ -1,0 +1,15 @@
+galaxy_info:
+  author: bit_kitchen
+  role_name: openwrt_storage
+
+  description: Configure OpenWrt for USB drive support and auto mount
+  license: MIT
+
+  min_ansible_version: 2.4
+
+  galaxy_tags:
+  - openwrt
+  - system
+
+dependencies:
+- gekmihesg.openwrt
