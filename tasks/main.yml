@@ -1,5 +1,6 @@
 ---
 # https://openwrt.org/docs/guide-user/storage/usb-drives-quickstart
+# https://openwrt.org/docs/guide-user/storage/usb-drives
 - name: Install required packages
   opkg:
     name: "{{ item }}"
@@ -8,8 +9,10 @@
   - e2fsprogs
   - kmod-fs-ext4
   - kmod-usb-storage
+  - kmod-usb-storage-uas
   - kmod-usb2
   - kmod-usb3
+  - usbutils
 
 - name: Config auto mount
   uci:
