@@ -14,6 +14,33 @@
   - kmod-usb3
   - usbutils
 
+- name: block detect
+  shell: block detect | uci import fstab
+
+- name: Enable mount points
+  uci:
+    command: section
+    config: fstab
+    type: mount
+    find_by:
+      enabled: '0'
+    value:
+      enabled: '1'
+  notify:
+  - uci commit
+
+- name: Enable SWAP
+  uci:
+    command: section
+    config: fstab
+    type: swap
+    find_by:
+      enabled: '0'
+    value:
+      enabled: '1'
+  notify:
+  - uci commit
+
 - name: Config auto mount
   uci:
     command: set
