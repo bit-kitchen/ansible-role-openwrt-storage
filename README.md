@@ -24,6 +24,7 @@ anon_swap  | yes     | Anonymous Swap: Mount swap not specifically configured
 anon_mount | yes     | Anonymous Mount: Mount filesystems not specifically configured
 auto_swap  | yes     | Automount Swap: Automatically mount swap on hotplug
 auto_mount | yes     | Automount Filesystem: Automatically mount filesystems on hotplug
+block_detect | no    | Detect and import currently attached filesystems
 
 Dependencies
 ------------

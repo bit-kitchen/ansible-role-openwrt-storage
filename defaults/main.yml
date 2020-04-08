@@ -7,3 +7,5 @@ anon_mount: yes
 auto_swap: yes
 # Automount Filesystem: Automatically mount filesystems on hotplug
 auto_mount: yes
+# Detect and import currently attached filesystems
+block_detect: no

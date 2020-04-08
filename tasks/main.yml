@@ -16,6 +16,7 @@
 
 - name: block detect
   shell: block detect | uci import fstab
+  when: block_detect
 
 - name: Enable mount points
   uci:
