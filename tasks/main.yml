@@ -59,3 +59,5 @@
   service:
     name: fstab
     enabled: yes
+
+- meta: flush_handlers
