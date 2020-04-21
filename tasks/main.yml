@@ -13,6 +13,7 @@
   - kmod-usb2
   - kmod-usb3
   - usbutils
+  notify: block mount
 
 - name: block detect
   shell: block detect | uci import fstab
@@ -29,6 +30,7 @@
       enabled: '1'
   notify:
   - uci commit
+  - block mount
 
 - name: Enable SWAP
   uci:
@@ -41,6 +43,7 @@
       enabled: '1'
   notify:
   - uci commit
+  - block mount
 
 - name: Config auto mount
   uci:
