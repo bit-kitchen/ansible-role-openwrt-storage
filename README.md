@@ -20,6 +20,7 @@ Role Variables
 
 Variable   | Default | Comment
 ---------- | ------- | -------
+opkg_update | yes     | Update opkg cache
 install_optional_packages | yes | Install `blkid`, `fdisk` and `lsblk`
 anon_swap  | yes     | Anonymous Swap: Mount swap not specifically configured
 anon_mount | yes     | Anonymous Mount: Mount filesystems not specifically configured

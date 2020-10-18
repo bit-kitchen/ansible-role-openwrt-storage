@@ -1,6 +1,10 @@
 ---
 # https://openwrt.org/docs/guide-user/storage/usb-drives-quickstart
 # https://openwrt.org/docs/guide-user/storage/usb-drives
+- name: opkg update
+  command: opkg update
+  when: opkg_update
+
 - name: Install required packages
   opkg:
     name: "{{ item }}"

@@ -1,4 +1,6 @@
 ---
+# Update opkg cache
+opkg_update: yes
 # Install optional packages (blkid, fdisk and lsblk)
 install_optional_packages: yes
 # Anonymous Swap: Mount swap not specifically configured
