@@ -15,6 +15,15 @@
   - usbutils
   notify: block mount
 
+- name: Install optional packages
+  opkg:
+    name: "{{ item }}"
+  with_items:
+  - blkid
+  - fdisk
+  - lsblk
+  when: install_optional_packages
+
 - name: block detect
   shell: block detect | uci import fstab
   when: block_detect

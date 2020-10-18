@@ -20,6 +20,7 @@ Role Variables
 
 Variable   | Default | Comment
 ---------- | ------- | -------
+install_optional_packages | yes | Install `blkid`, `fdisk` and `lsblk`
 anon_swap  | yes     | Anonymous Swap: Mount swap not specifically configured
 anon_mount | yes     | Anonymous Mount: Mount filesystems not specifically configured
 auto_swap  | yes     | Automount Swap: Automatically mount swap on hotplug
