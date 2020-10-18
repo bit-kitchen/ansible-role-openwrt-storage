@@ -28,32 +28,6 @@
   shell: block detect | uci import fstab
   when: block_detect
 
-- name: Enable mount points
-  uci:
-    command: section
-    config: fstab
-    type: mount
-    find_by:
-      enabled: '0'
-    value:
-      enabled: '1'
-  notify:
-  - uci commit
-  - block mount
-
-- name: Enable SWAP
-  uci:
-    command: section
-    config: fstab
-    type: swap
-    find_by:
-      enabled: '0'
-    value:
-      enabled: '1'
-  notify:
-  - uci commit
-  - block mount
-
 - name: Config auto mount
   uci:
     command: set
